@@ -1,0 +1,28 @@
+<html>
+<head>
+  <link rel="stylesheet" href="styles/vendor.css"/>
+  <link rel="stylesheet" href="alchemy.css"/>
+</head>
+<body>
+  <div class="alchemy" id="alchemy"></div>
+
+  <script src="scripts/vendor.js"></script>
+  <script src="alchemy.js"></script>
+  <script type="text/javascript">
+
+    var config = {
+      dataSource: '../app/sample_data/contrib.json',
+      graphHeight: 260,
+      graphWidth: 300,
+      
+      linkDistance: function(){ return 40; },
+
+      nodeTypes: {"node_type": ["Maintainer", "Contributor"]},
+      caption: function(node){ return node.caption; }
+    };
+
+    alchemy = new Alchemy(config)
+  </script>
+</body>
+</html>
+           
